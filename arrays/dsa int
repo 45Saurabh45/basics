@@ -164,3 +164,23 @@ var longestConsecutive = function(nums) {
     }
     return streak
 };
+
+function findSubsetsWithSum(arr, target) {
+    let result = [];
+
+    function backtrack(start, subset, sum) {
+        if (sum === target) {
+            result.push([...subset]);
+        }
+        if (sum >= target) return; // Stop if sum exceeds target
+
+        for (let i = start; i < arr.length; i++) {
+            subset.push(arr[i]);
+            backtrack(i + 1, subset, sum + arr[i]);
+            subset.pop(); // Backtrack
+        }
+    }
+
+    backtrack(0, [], 0);
+    return result;
+}
