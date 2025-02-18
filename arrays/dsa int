@@ -145,3 +145,22 @@
 //     return res
 // }
 // console.log(fiboSeries(3000,9000))
+
+var longestConsecutive = function(nums) {
+    if(nums.length ===0 ) return 0
+    const set =  new Set(nums);
+    let streak = 0 
+    for(let n of nums){
+        if(!set.has(n-1)){
+            let curr = n
+            let currStreak = 1
+            while(set.has(curr+1)){
+                curr+=1
+                currStreak += 1
+            }
+        streak =  Math.max(streak, currStreak)
+
+        }
+    }
+    return streak
+};
