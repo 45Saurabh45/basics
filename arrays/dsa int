@@ -184,3 +184,26 @@ function findSubsetsWithSum(arr, target) {
     backtrack(0, [], 0);
     return result;
 }
+
+
+Method	        Description
+findOne()	    Retrieves a single record based on conditions
+findAll()	    Retrieves multiple records based on conditions
+create()	    Creates a new record
+update()	    Updates existing records
+destroy()	    Deletes records
+findByPk()	    Finds a record by its primary key
+count()	        Returns the count of records matching conditions
+bulkCreate()	Creates multiple records at once
+findOrCreate()	Finds a record or creates it if not found
+upsert()	    Updates or creates a record
+set()	        Sets the value of a related model in an association
+add()	        Adds an association to a many-to-many relationship
+remove()	    Removes an association from a related model
+addScope()	    Adds a query scope to a model
+scope()	        Applies a scope to a query
+                include	Eager loads related models in a query
+transaction()	Starts a transaction to run multiple queries atomically
+raw()	        Executes a raw SQL query
+reload()	    Reloads an instance with fresh data from the DB
+restore()	    Restores a soft-deleted record
